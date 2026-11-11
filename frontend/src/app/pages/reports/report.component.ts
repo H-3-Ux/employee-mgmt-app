@@ -48,10 +48,10 @@ function today(): Date { const d = new Date(); return new Date(d.getFullYear(), 
       <mat-datepicker-toggle matIconSuffix [for]="rp" />
       <mat-date-range-picker #rp />
       @if (rangeInvalid()) { <mat-hint class="err">'From' must be on or before 'To'</mat-hint> }
-      @else { <mat-hint>DD/MM/YYYY – DD/MM/YYYY</mat-hint> }
+      
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" floatLabel="always">
       <mat-label>Status</mat-label>
       <mat-select formControlName="status">
         <mat-option value="">All</mat-option>
@@ -59,7 +59,7 @@ function today(): Date { const d = new Date(); return new Date(d.getFullYear(), 
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" floatLabel="always">
       <mat-label>Department</mat-label>
       <mat-select formControlName="departmentId">
         <mat-option [value]="null">All</mat-option>
