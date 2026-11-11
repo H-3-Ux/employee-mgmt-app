@@ -107,6 +107,7 @@ import { ConfirmDialogComponent } from '../../shared/confirm-dialog.component';
     .table-card { background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.12); overflow: hidden; }
     .table-scroll { overflow-x: auto; }
     table { width: 100%; min-width: 1000px; }
+    td, th { white-space: nowrap; }
     .clickable { cursor: pointer; }
     .clickable:hover { background: #f5f7fb; }
     .num { text-align: right; padding-right: 24px; }
