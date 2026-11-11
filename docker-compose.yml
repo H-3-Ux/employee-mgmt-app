@@ -1,0 +1,9 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: empdb-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: empdb
+    ports:
+      - "3306:3306"
