@@ -33,7 +33,8 @@ import { IdleService } from '../core/idle.service';
     .toolbar { position: sticky; top: 0; z-index: 10; gap: 8px; }
     .brand { font-weight: 600; margin-right: 16px; }
     .spacer { flex: 1 1 auto; }
-    nav a.active { background: rgba(255,255,255,.18); }
+    nav a.active { background: rgba(0,0,0,.08); }
+    .toolbar { border-bottom: 1px solid #e0e0e0; }
     .content { padding: 24px; max-width: 1280px; margin: 0 auto; }
     @media (max-width: 600px) { .brand { display: none; } .who { display: none; } .content { padding: 12px; } }
   `]
