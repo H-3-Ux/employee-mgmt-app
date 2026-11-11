@@ -1,6 +1,5 @@
 package com.raj.backend.exception;
 
-import org.springframework.data.mapping.PropertyReferenceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -30,7 +29,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(Map.of("message", "Validation failed", "errors", errors));
     }
 
-    @ExceptionHandler({HttpMessageNotReadableException.class, PropertyReferenceException.class})
+    @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<Map<String, Object>> badRequest(Exception ex) {
         return ResponseEntity.badRequest().body(Map.of("message", "Invalid request"));
     }
