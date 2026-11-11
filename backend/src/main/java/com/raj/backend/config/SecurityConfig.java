@@ -26,6 +26,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(a -> a
                 .requestMatchers("/api/auth/**", "/error").permitAll()
                 .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
+                .requestMatchers("/api/reports/**").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
                 .anyRequest().authenticated())
             .exceptionHandling(e -> e.authenticationEntryPoint(
